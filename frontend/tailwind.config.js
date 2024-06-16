@@ -5,6 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,jsx,ts,tsx}",
     "./pages/**/*.{js,jsx,ts,tsx}",
+    "./skeletons/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {},
