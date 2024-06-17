@@ -11,7 +11,7 @@ const path = require("path")
 const PORT = process.env.PORT || 5000;
 
 dotenv.config();
-const _dirname = path.resolve();
+// const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cookieParser());
@@ -19,10 +19,10 @@ app.use("/api/auth" , authRoute);
 app.use("/api/message" , messageRoute);
 app.use("/api/users" , userRoute);
 
-app.use(express.static(path.join(_dirname, "/frontend/dist")));
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(_dirname, "frontend", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
 server.listen(PORT, () => {
