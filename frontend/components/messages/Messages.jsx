@@ -3,6 +3,7 @@ import useGetMessages from "../../hooks/useGetMessages";
 import MessageSkeleton from "../../skeletons/MessageSkeleton.jsx";
 import Message from "./Message";
 import useListenMessages from "../../hooks/useListenMessages.js";
+import "./messages.css";
 
 const Messages = () => {
   const { messages, loading } = useGetMessages();
@@ -15,7 +16,7 @@ const Messages = () => {
   }, [messages]);
 
   return (
-    <div className="px-4 flex-1 overflow-auto ">
+    <div className="px-4 flex-1 overflow-auto message_container">
       {loading && [...Array(3)].map((_, idx) => <MessageSkeleton key={idx} />)}
       {!loading &&
         messages.length > 0 &&

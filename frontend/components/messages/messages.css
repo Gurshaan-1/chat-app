@@ -1,0 +1,10 @@
+.message_container {
+  max-width: 28rem;
+}
+
+.message {
+  display: inline-block;
+  max-width: 35%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}

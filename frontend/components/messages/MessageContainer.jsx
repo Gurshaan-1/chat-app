@@ -4,6 +4,7 @@ import { TiMessages } from "react-icons/ti";
 import useConversation from "../../zustand/useConversation";
 import { useAuthContext } from "../../context/authContext";
 import { useEffect } from "react";
+// import "./messages.css"
 const MessageContainer = () => {
  
 const { selectedConversation, setSelectedConversation } = useConversation();
@@ -19,11 +20,12 @@ useEffect(() => {
       ) : (
         <>
           {/* Header */}
-          <div className="bg-slate-500 px-4 py-2 mb-2">
+          <div className="bg-slate-700 px-4 py-2 mb-2">
             <span className="label-text">To:</span>{" "}
-            <span className="text-gray-900 font-bold">{selectedConversation.fullName}</span>
+            <span className="text-white font-bold">
+              {selectedConversation.fullName}
+            </span>
           </div>
-
           <Messages />
           <MessageInput />
         </>
