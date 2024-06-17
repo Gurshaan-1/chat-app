@@ -7,12 +7,19 @@ const messageRoute = require("./routes/messageroutes")
 const userRoute = require("./routes/userroutes")
 const connectToMongoDB = require("./db/connectToMongoDB")
 const path = require("path")
+const cors = require("cors");
 
 const PORT = process.env.PORT || 5000;
 
 dotenv.config();
 const rootDir = process.cwd();
+// __dirname = path.resolve()
+const corsOptions = {
+  origin: "https://chat-app-2-fm6h.onrender.com", // Update this with your deployed frontend URL
+  credentials: true,
+};
 
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/auth" , authRoute);
