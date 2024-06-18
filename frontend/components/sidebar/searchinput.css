@@ -1,0 +1,12 @@
+@media only screen and (max-width: 320px) {
+  .sm\:2-\[320px\] {
+    width: 150px;
+  }
+}
+
+@media only screen and (max-width: 256px) {
+  .sm\:2-\[256px\] {
+    width: 100px;
+  }
+}
+

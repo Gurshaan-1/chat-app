@@ -2,6 +2,7 @@ import { useState } from "react";
 import GenderCheckbox from "./GenderCheckbox";
 import { Link } from "react-router-dom";
 import useSignup from "../../hooks/useSignUp";
+import "./signup.css"
 
 const SignUp = () => {
   const [inputs, setInputs] = useState({
@@ -23,8 +24,8 @@ e.preventDefault();
 await signup(inputs);
 };
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0">
+    <div className=" sm:10-[400px] sm:1-[400px] flex flex-col items-center justify-center mx-auto overflow-auto">
+      <div className=" sm:1-[400px] w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 ">
         <h1 className="text-3xl font-semibold text-center text-gray-300">
           Sign Up <span className="text-blue-500"> ChatApp</span>
         </h1>
@@ -37,7 +38,7 @@ await signup(inputs);
             <input
               type="text"
               placeholder="John Doe"
-              className="w-full input input-bordered  h-10"
+              className=" sm:9-[400px] w-full input input-bordered  h-10"
               value={inputs.fullName}
               onChange={(e) =>
                 setInputs({ ...inputs, fullName: e.target.value })
@@ -52,7 +53,7 @@ await signup(inputs);
             <input
               type="text"
               placeholder="johndoe"
-              className="w-full input input-bordered h-10"
+              className="sm:9-[400px] w-full input input-bordered h-10"
               value={inputs.username}
               onChange={(e) =>
                 setInputs({ ...inputs, username: e.target.value })
@@ -67,7 +68,7 @@ await signup(inputs);
             <input
               type="password"
               placeholder="Enter Password"
-              className="w-full input input-bordered h-10"
+              className="sm:9-[400px] w-full input input-bordered h-10"
               value={inputs.password}
               onChange={(e) =>
                 setInputs({ ...inputs, password: e.target.value })
@@ -82,7 +83,7 @@ await signup(inputs);
             <input
               type="password"
               placeholder="Confirm Password"
-              className="w-full input input-bordered h-10"
+              className="sm:9-[400px] w-full input input-bordered h-10"
               value={inputs.confirmPassword}
               onChange={(e) =>
                 setInputs({ ...inputs, confirmPassword: e.target.value })

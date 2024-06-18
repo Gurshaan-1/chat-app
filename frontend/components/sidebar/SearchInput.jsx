@@ -3,7 +3,7 @@ import { IoSearchSharp } from "react-icons/io5";
 import useConversation from "../../zustand/useConversation";
 import useGetConversations from "../../hooks/useGetConversations";
 import toast from "react-hot-toast";
-
+import "./searchinput.css"
 const SearchInput = () => {
   const [search, setSearch] = useState("");
   const { setSelectedConversation } = useConversation();
@@ -30,7 +30,7 @@ const SearchInput = () => {
       <input
         type="text"
         placeholder="Search…"
-        className="input input-bordered rounded-full"
+        className="sm:2-[320px] sm:2-[256px] input input-bordered rounded-full"
         value={search}
         onChange={(e) => setSearch(e.target.value)}
       />

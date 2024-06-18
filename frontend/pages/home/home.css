@@ -1,0 +1,11 @@
+@media only screen and (max-width: 640px) {
+  .sm\:h-\[451px\] {
+    height: 451px;
+  }
+}
+
+@media only screen and (max-width: 256px) {
+  .sm\:3-\[256px\] {
+    height: 250px;
+  }
+}

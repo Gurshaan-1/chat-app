@@ -1,0 +1,6 @@
+@media only screen and (min-width: 0px) {
+  .sm\:4-\[400px\] {
+    width: 100vw;
+   height: 100vh;
+  }
+}

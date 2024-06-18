@@ -1,0 +1,16 @@
+@media only screen and (max-width: 400px) {
+  .sm\:6-\[400px\] {
+    width: 300px;
+    height: 350px;
+  }
+}
+@media only screen and (min-width: 400px) {
+  .sm\:7-\[400px\] {
+    width:24rem;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .sm\:5-\[400px\] {
+    width: 100px;
+  }
+}

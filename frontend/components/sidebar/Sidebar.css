@@ -1,0 +1,6 @@
+@media only screen and (max-width: 320px) {
+  .sm\:w-\[320px\] {
+    /* width: 200px; */
+    height: 350px;
+  }
+}
